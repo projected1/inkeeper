@@ -1,0 +1,23 @@
+HKCR
+{
+	ChromaticNews.BrowserUIHandler.1 = s 'BrowserUIHandler Class'
+	{
+		CLSID = s '{1f73f402-272c-4a9b-9af6-7d5d2f59b7fd}'
+	}
+	ChromaticNews.BrowserUIHandler = s 'BrowserUIHandler Class'
+	{
+		CLSID = s '{1f73f402-272c-4a9b-9af6-7d5d2f59b7fd}'
+		CurVer = s 'ChromaticNews.BrowserUIHandler.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {1f73f402-272c-4a9b-9af6-7d5d2f59b7fd} = s 'BrowserUIHandler Class'
+		{
+			ProgID = s 'ChromaticNews.BrowserUIHandler.1'
+			VersionIndependentProgID = s 'ChromaticNews.BrowserUIHandler'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			'TypeLib' = s '{34f84bd5-def2-42c5-a52d-e1009b6dac37}'
+		}
+	}
+}

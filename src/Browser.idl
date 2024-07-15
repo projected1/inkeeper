@@ -1,0 +1,58 @@
+// Browser.idl : IDL source for Browser
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Browser.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "atliface.idl";
+
+// ----------------------------------------------------------------------------
+[
+	object,
+	uuid(ff630fe4-c071-4239-8851-de1e34e3f9ce),
+	dual,
+	nonextensible,
+	helpstring("IBrowserHost Interface"),
+	pointer_default(unique)
+]
+interface IBrowserHost : IDispatch{
+};
+// ----------------------------------------------------------------------------
+[
+	object,
+	uuid(a46d8a0c-cc06-4ef5-85a5-9d28f1c7a021),
+	dual,
+	nonextensible,
+	helpstring("IBrowserUIHandler Interface"),
+	pointer_default(unique)
+]
+interface IBrowserUIHandler : IDocHostUIHandlerDispatch{
+};
+// ----------------------------------------------------------------------------
+[
+	uuid(34f84bd5-def2-42c5-a52d-e1009b6dac37),
+	version(1.0),
+	helpstring("Browser 1.0 Type Library")
+]
+library BrowserLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(c0c21848-a4ba-4d9d-8308-fdc9d5eb0480),
+		helpstring("BrowserHost Class")
+	]
+	coclass BrowserHost
+	{
+		[default] interface IBrowserHost;
+	};
+	[
+		uuid(1f73f402-272c-4a9b-9af6-7d5d2f59b7fd),
+		helpstring("BrowserUIHandler Class")
+	]
+	coclass BrowserUIHandler
+	{
+		[default] interface IBrowserUIHandler;
+	};
+};

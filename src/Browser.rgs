@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'Browser'
+		'Browser.EXE'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}
